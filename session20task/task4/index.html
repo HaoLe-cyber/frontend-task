@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let str = prompt("Nhập chuỗi:");
+        let digit = prompt("Nhập ký tự cần tìm:")
+        if ('A' <= digit && digit <= 'Z' || 'a' <= digit && digit <= 'z') {
+            alert("Ký tự không hợp lệ");
+        }
+        else {
+            let check = 0;
+            for (let i = 0; i < str.length; i++) {
+                if (str.charAt(i) == digit) {
+                    alert("Tồn tại ký tự cần tìm");
+                    check = 1
+                    break;
+                }
+            }
+            if (check == 0) {
+                alert("Không tồn tại ký tự cần tìm");
+            }
+        }
+    </script>
+</body>
+
+</html>
