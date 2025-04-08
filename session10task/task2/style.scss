@@ -1,0 +1,27 @@
+body {
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    background-color: rgb(224, 217, 217);
+    justify-content: center;
+    align-items: center;
+    height: 310px;
+    width: 700px;
+    border-radius: 5px;
+
+    .title {
+        justify-content: flex-start;
+        align-items: flex-start;
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    img {
+        margin-top: 20px;
+        height: 150px;
+        width: 150px;
+        border-radius: 4px;
+    }
+}
