@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<style>
+    label {
+        display: inline-block;
+        width: 200px;
+        margin-bottom: 10px;
+    }
+</style>
+
+<body>
+    <main>
+        <label for="fname"><b>Họ và tên: </b></label>
+        <input type="text" name="fname" id="fname" required><br>
+        <label for="dob"><b>Ngày sinh: </b></label>
+        <input type="date" name="dob" id="dob" required><br>
+        <label for="gender"><b>Giới tính: </b></label>
+        <input type="radio" value="nam" name="gender">Nam <input type="radio" value="Nữ" name="gender">Nữ<br>
+        <label for="phonenum"><b>Số điện thoại: </b></label>
+        <input type="tel" name="phonenum" id="phonenum" required><br>
+        <label for="email"><b>Email</b></label>
+        <input type="email" name="email" id="email" required><br>
+        <label for="companyname"><b>Tên công ty: </b></label>
+        <input type="text" name="companyname" id="companyname" required><br>
+        <label for="roleincompany"><b>Vai trò trong công ty: </b></label>
+        <select name="roleincompany" id="roleincompany">
+            <option value="1">Giám đôc điều hành(CEO)</option>
+            <option value="2">Nhân viên kế toán</option>
+            <option value="3">Nhân viên 3</option>
+        </select><br>
+        <label for="companysize"><b>Quy mô công ty: </b></label>
+        <select name="companysize" id="companysize">
+            <option value="1">nhỏ</option>
+            <option value="2">trung bình</option>
+            <option value="3">lớn</option>
+        </select><br>
+        <label for="companyindustry"><b>Ngành nghề công ty: </b></label>
+        <input type="text" name="companyindustry" id="companyindustry" required><br>
+        <label for="clubjoinreason"><b>Lý do tham gia câu lạc bộ: </b></label>
+        <textarea name="clubjoinreason" id="clubjoinreason"></textarea><br>
+        <label for="leadexperience"><b>Kinh nghiệm lãnh đạo: </b></label>
+        <textarea name="leadexperience" id="leadexperience"></textarea><br>
+        <label for="clubgoal"><b>Mục tiêu khi tham gia câu lạc bộ: </b></label>
+        <textarea name="clubgoal" id="clubgoal"></textarea><br>
+        <label for="eventjoinrequest"><b>Chương trình sự kiện mong muốn tham gia: </b></label>
+        <input type="checkbox" name="event" id="event1" value="value1">Networking <input type="checkbox" name="event"
+            id="event2" value="value2"> Workshops <input type="checkbox" name="event" id="event3" value="value3"> Hội
+        thảo<br>
+
+        <label for="annouce"><b>Đăng ký nhận bản tin</b></label>
+        <input type="checkbox" name="annouce" id="annouce" value="yes">
+        <label for="annouce"> Có</label><br>
+        <button type="submit">Đăng ký hội viên</button>
+    </main>
+</body>
+
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<style>
+    label {
+        display: inline-block;
+        width: 200px;
+        margin-bottom: 10px;
+    }
+</style>
+<body>
+    <main>
+        <form action="/" method="post">
+            <label for="fname"><b>Họ và tên: </b></label>
+            <input type="text" name="fname" id="fname" required><br>
+            <label for="dob"><b>Ngày sinh: </b></label>
+            <input type="date" name="dob" id="dob" required><br>
+            <label for="gender"><b>Giới tính: </b></label>
+            <input type="radio" name="gender" id="gender" value="male" />Nam
+            <input type="radio" name="gender" id="gender" value="female" />Nữ<br>
+            <label for="identifiedNumber"><b>Số căn cước công dân: </b></label>
+            <input type="number" name="identifiedNumber" id="identifiedNumber" required><br>
+            <label for="dateofissue"><b>Ngày cấp: </b></label>
+            <input type="date" name="dateofissue" id="dateofissue"  required><br>
+            <label for="placeofissue"><b>Nơi cấp: </b></label>
+            <input type="text" name="placeofissue" id="placeofissue" required><br>
+            <label for="phonenum"><b>Số điện thoại: </b></label>
+            <input type="tel" name="phonenum" id="phonenum" required><br>
+            <label for="email"><b>Email</b></label>
+            <input type="email" name="email" id="email" required><br>
+            <label for="address"><b>Địa chỉ thường chú: </b></label>
+            <textarea name="address" id="address" ></textarea><br>
+            <label for="IDtype"><b>Loại căn cước công dân: </b></label>
+            <label> <input type="radio" name="IDtype" id="IDtype" value="new" />Căn cước công dân mới</label>
+            <label> <input type="radio" name="IDtype" id="IDtype" value="old" />Căn cước công dân cũ</label><br>
+            <label for="nation"><b>Dân tộc: </b></label>
+            <input type="text" name="nation" id="nation" required><br>
+            <label for="religion"><b>Tôn giáo: </b></label>
+            <input type="text" name="religion" id="religion" required><br>
+            <label for="nationality"><b>Quốc tịch: </b></label>
+            <input type="text" name="nationality" id="religion" value="Việt Nam"><br>
+            <label for="parentsName"><b>Họ và tên cha/mẹ: </b></label>
+            <input type="text" name="parentsName" id="parentsName" required><br>
+            <label for="parentsId"><b>Số CCCD của cha/mẹ: </b></label>
+            <input type="number" name="parentsId" id="parentsId" required><br>
+            <label for="city"><b>Tỉnh/thành phố: </b></label>
+            <select name="city" id="city" required>
+                <option value="1">thành phố 1</option>
+                <option value="2">thành phố 2</option>   
+                <option value="3">thành phố 3</option>
+            </select><br>
+            <button type="submit">Gửi thông tin</button>
+        </form>
+    </main>
+</body>
+</html>

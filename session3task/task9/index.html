@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<style>
+    label {
+        display: inline-block;
+        width: 200px;
+        margin-bottom: 10px;
+    }
+</style>
+
+<body>
+    <main>
+        <form action="/" method="post">
+            <label for="fname"><b>Họ và tên: </b></label>
+            <input type="text" name="fname" id="fname" required><br>
+            <label for="dob"><b>Ngày sinh: </b></label>
+            <input type="date" name="dob" id="dob" required><br>
+            <label for="gender"><b>Giới tính: </b></label>
+            <input type="radio" name="gender" id="gender" value="male" />Nam
+            <input type="radio" name="gender" id="gender" value="female" />Nữ<br>
+            <label for="phonenum"><b>Số điện thoại: </b></label>
+            <input type="tel" name="phonenum" id="phonenum" required><br>
+            <label for="email"><b>Email</b></label>
+            <input type="email" name="email" id="email" required><br>
+            <label for="address"><b>Địa chỉ thường chú: </b></label>
+            <textarea name="address" id="address"></textarea><br>
+            <label for="roleingroup"><b>Vai trò trong nhóm: </b></label>
+            <select name="roleingroup" id="roleingroup">
+                <opfion value="1">Nhóm trưởng</option>
+                    <option value="2">Nhóm viên</option>
+            </select><br>
+            <label for="hobby"><b>Sở thích: </b></label>
+            <input type="text" name="hobby" id="hobby" required><br>
+            <label for="skills"><b>Kỹ năng: </b></label>
+            <textarea name="skills" id="skills"></textarea><br>
+            <label for="freetime"><b>Thời gian rảnh: </b></label>
+            <input type="checkbox" id="time1" name="time1" value="morning"> Sáng
+            <input type="checkbox" id="time2" name="time2" value="afternoon"> Chiều
+            <input type="checkbox" id="time3" name="time3" value="night"> Tối <br>
+
+            <label for="joinreason"><b>Lí do tham gia nhóm: </b></label>
+            <textarea name="joinreason" id="joinreason"></textarea><br>
+            <label for="favcolor"><b>Màu yêu thích: </b></label>
+            <input type="color" name="favcolor" id="favcolor"><br>
+            <label for="signoption"><b>Đăng ký nhận bản tin: </b></label>
+            <input type="checkbox" id="signoption" name="signoption" value="yes">
+            <label for="signoption"> Có </label><br>
+            <label for="emailannouce"><b>Nhận thông báo qua email: </b></label>
+            <input type="radio" name="emailannouce" id="emailannouce" value="email" />Email
+            <input type="radio" name="emailannouce" id="emailannouce" value="sms" />SMS<br>
+            <button type="submit">Đăng ký thành viên</button>
+        </form>
+    </main>
+</body>
+
+</html>
