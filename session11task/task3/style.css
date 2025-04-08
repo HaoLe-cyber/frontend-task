@@ -1,0 +1,164 @@
+.container {
+    display: grid;
+    grid-template-areas:
+        'head head head head head head head head'
+        'side side side side side side side side'
+        'main main main main main main main main'
+        'footer footer footer footer footer footer footer footer';
+    gap: 20px;
+    grid-template-rows: 200px 80px 130px 80px;
+}
+
+.item1 {
+    grid-area: head;
+    background-color: palevioletred;
+}
+
+.item2 {    
+    grid-area: side;
+    background-color: pink;
+}
+
+.item3 {
+    grid-area: side;
+    background-color: pink;
+}
+
+.item4 {
+    grid-area: side;
+    background-color: pink;
+}
+
+.item5 {
+    grid-area: side;
+    background-color: pink;
+}
+
+.item6 {
+    grid-area: main;
+    background-color: papayawhip;
+}
+
+.item7 {
+    grid-area: main;
+    background-color: papayawhip;
+}
+
+.item8 {
+    grid-area: footer;
+    background-color: violet;
+}
+
+@media screen and (min-width:1200px) {
+    .container {
+        grid-template-rows: 200px 50px 130px 50px;
+    }
+
+    .item1 {
+        grid-area: 1/span 8
+    }
+
+    .item2 {
+        grid-area: 2/span 2
+    }
+
+    .item3 {
+        grid-area: 2/span 2
+    }
+
+    .item4 {
+        grid-area: 2/span 2
+    }
+
+    .item5 {
+        grid-area: 2/span 2
+    }
+
+    .item6 {
+        grid-area: 3/span 4;
+    }
+
+    .item7 {
+        grid-area: 3/span 4;
+    }
+
+    .item8 {
+        grid-area: 4/span 8;
+    }
+}
+
+@media screen and (min-width:768px) and (max-width:1200px) {
+    .container {
+        grid-template-rows: 150px 80px 80px 100px 100px 150px;
+    }
+
+    .item1 {
+        grid-area: 1/span 8
+    }
+
+    .item2 {
+        grid-area: 2/span 4
+    }
+
+    .item3 {
+        grid-area: 2/span 4
+    }
+
+    .item4 {
+        grid-area: 3/span 4
+    }
+
+    .item5 {
+        grid-area: 3/span 4
+    }
+
+    .item6 {
+        grid-area: 4/span 8
+    }
+
+    .item7 {
+        grid-area: 5/span 8
+    }
+
+    .item8 {
+        grid-area: 6/span 8
+    }
+}
+
+@media screen and (max-width:768px) {
+    .container {
+        grid-template-rows: 150px 80px 80px 80px 80px 100px 100px 150px;
+    }
+
+    .item1 {
+        grid-area: 1/span 8
+    }
+
+    .item2 {
+        grid-area: 2/span 8
+    }
+
+    .item3 {
+        grid-area: 3/span 8
+    }
+
+    .item4 {
+        grid-area: 4/span 8
+    }
+
+    .item5 {
+        grid-area: 5/span 8
+    }
+
+    .item6 {
+        grid-area: 6/span 8
+    }
+
+    .item7 {
+        grid-area: 7/span 8
+    }
+
+    .item8 {
+        grid-area: 8/span 8
+    }
+}

@@ -1,0 +1,96 @@
+.container {
+    padding: 30px;
+    background-color: gainsboro;
+    display: grid;
+    grid-template-areas:
+        'name name main main main main mail mail';
+    gap: 20px;
+}
+
+.item1 {
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    grid-area: name;
+    background-color: gray;
+    color: white
+}
+
+.item2 {
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+.box {
+    background-color: white;
+    border-radius: 6px;
+    padding: 10px 40px;
+    justify-content: left;
+    margin-top: 20px;
+}
+
+.item3 {
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    grid-area: mail;
+    background-color: gray;
+    color: white
+}
+
+@media screen and (min-width:1200px) {
+    .container {
+        grid-template-rows: 600px
+    }
+
+    .item1 {
+        grid-area: 1/span 2
+    }
+
+    .item2 {
+        grid-area: 1/span 4
+    }
+
+    .item3 {
+        grid-area: 1/span 2
+    }
+}
+
+@media screen and (min-width:768px) and (max-width:1200px) {
+    .container {
+        grid-template-rows: 600px 80px
+    }
+
+    .item1 {
+        grid-area: 1/span 3
+    }
+
+    .item2 {
+        grid-area: 1/span 5
+    }
+
+    .item3 {
+        grid-area: 2/span 3
+    }
+}
+
+@media screen and (max-width:768px) {
+    .container {
+        grid-template-rows: 100px 600px 100px
+    }
+
+    .item1 {
+        grid-area: 1/span 8;
+        align-items: center;
+    }
+
+    .item2 {
+        grid-area: 2/span 8
+    }
+
+    .item3 {
+        grid-area: 3/span 8
+    }
+}
