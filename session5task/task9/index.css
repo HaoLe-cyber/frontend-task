@@ -1,0 +1,124 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    display: flex;
+    justify-content: center;
+    /* căn giữa */
+    padding: 20px;
+}
+
+.container {
+    background: white;
+    padding: 30px;
+    max-width: 500px;
+    /* Co giãn theo màn hình */
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.7);
+}
+
+h2 {
+    margin-bottom: 15px;
+}
+
+label {
+    font-weight: bold;
+    font-size: 14px;
+    display: block;
+    /* mỗi tựa hiển thị 1 dòng riêng */
+    margin: 10px 0 5px;
+    /* trên 10 dưới 5 */
+}
+
+input,
+select {
+    width: 95%;
+    padding: 7px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.style-input {
+    background: linear-gradient(to right, rgb(131, 128, 128) 5px, white 30%);
+}
+
+.row {
+    display: flex;
+    gap: 30px;
+}
+
+.row>div {
+    flex: 1;
+}
+
+.divider {
+    border-top: 1px solid #999;
+    margin-bottom: 15px;
+    /* tạo khoảng cách giữa cho nét đứt */
+}
+
+.checkbox-group,
+.radio-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 15px;
+}
+
+.checkbox-group label,
+.radio-group label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 14px;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+    width: 13px;
+    height: 13px;
+    margin: 0;
+}
+
+.text {
+    font-size: 12px;
+    margin-bottom: 15px;
+    opacity: 0.7;
+}
+
+.button {
+    background-color: #007bff;
+    color: white;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.button:hover {
+    background-color: #5b9bdf;
+}
+
+/* Responsive: Hiển thị cột dọc khi màn hình nhỏ */
+@media (max-width: 600px) {
+    .row {
+        flex-direction: column;
+    }
+}
+
+.forexamp {
+    padding: 5px;
+    border-radius: 5px 0 0 5px;
+    background-color: whitesmoke;
+}
+
+.user {
+    width: 95%;
+    padding: 5px;
+    margin-bottom: 0px;
+    border-radius: 0px;
+}

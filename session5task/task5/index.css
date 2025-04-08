@@ -1,0 +1,19 @@
+body {
+    line-height: 20px;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.board {
+    width: 50%;
+    border-left :#e8b016 solid 15px;
+    width: 80%;
+    background-color: #f1d178;
+    padding: 20px;
+}
+
+.text-content {
+    width: 40%;
+}

@@ -1,0 +1,10 @@
+main {
+    background-color: black;
+}
+
+p {
+    font-size: 30px;
+    color: yellowgreen;
+    text-decoration-line: underline;
+    text-decoration-style: dotted;
+}

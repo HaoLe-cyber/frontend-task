@@ -1,0 +1,71 @@
+.container {
+    width: 70%;
+    margin: auto;
+}
+
+/* tựa đề */
+.title {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* đường ke nét đứt */
+.divider {
+    border-top: 2px dashed #999;
+    margin-bottom: 15px;
+    /* tạo khoảng cách giữa cho nét đứt */
+}
+
+/* ảnh của mỗi bài viết */
+.post-img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    /* ảnh không bị bóp méo khi chỉnh kích thước bất kì */
+    border-radius: 5px;
+}
+
+/* Phần nội dung giãn ra để lấp đầy */
+.post-content {
+    flex: 1;
+    font-weight: bold;
+}
+
+/* ngày đăng bài bài */
+.post-date {
+    font-size: 12px;
+    color: gray;
+}
+
+/* tiêu đề của mỗi bài viết */
+.post-title {
+    font-weight: bold;
+    color: #3A3A90;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+/* hiệu ứng khi di chuột vao tiêu đề */
+.post-title:hover {
+    text-decoration: underline;
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+
+.vertical-line {
+    height: 80px;
+    /* Chiều cao của đường gạch */
+    margin: 0 10px;
+    border-left: 1px solid rgb(82, 81, 81);
+    /* Đường gạch dọc dạng nét đứt */
+}

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bai 9</title>
+    <link rel="stylesheet" href="index.css" />
+</head>
+
+<body>
+    <form action="/infor.com" methor="post">
+        <div class="container">
+            <h2>Billing address</h2>
+
+            <div class="row">
+                <div>
+                    <label>First name</label>
+                    <input type="text" name="firstname" id="firstname" required />
+                </div>
+                <div>
+                    <label>Last name</label>
+                    <input type="text" name="lastname" id="lastname" required />
+                </div>
+            </div>
+
+            <label>Username</label>
+            <span class="forexamp">@<input type="text" placeholder="Username" class="user"></span>
+
+            <label>Email (Optional)</label>
+            <input type="email" placeholder="you@example.com" />
+
+            <label>Address</label>
+            <input type="text" placeholder="1234 Main St" />
+
+            <label>Address 2 (Optional)</label>
+            <input type="text" placeholder="Apartment or suite" />
+
+            <div class="row">
+                <div>
+                    <label>Country</label>
+                    <select>
+                        <option>Choose...</option>
+                    </select>
+                </div>
+                <div>
+                    <label>State</label>
+                    <select>
+                        <option>Choose...</option>
+                    </select>
+                </div>
+                <div>
+                    <label>Zip</label>
+                    <input type="text" />
+                </div>
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="checkbox-group">
+                <label>
+                    <input type="checkbox" />
+                    Shipping address is the same as my billing address
+                </label>
+                <label>
+                    <input type="checkbox" />
+                    Save this information for next time
+                </label>
+            </div>
+
+            <div class="divider"></div>
+
+            <h2>Payment</h2>
+            <div class="radio-group">
+                <label>
+                    <input type="radio" name="payment" checked />
+                    Credit card
+                </label>
+                <label>
+                    <input type="radio" name="payment" />
+                    Debit card
+                </label>
+                <label>
+                    <input type="radio" name="payment" />
+                    PayPal
+                </label>
+            </div>
+
+            <div class="row">
+                <div>
+                    <label>Name on card</label>
+                    <input type="text" />
+                </div>
+                <div>
+                    <label>Credit card number</label>
+                    <input type="text" />
+                </div>
+            </div>
+
+            <div class="text">Full name as displayed on card</div>
+
+            <div class="row">
+                <div>
+                    <label>Expiration</label>
+                    <input type="text" />
+                </div>
+                <div>
+                    <label>CVV</label>
+                    <input type="text" />
+                </div>
+            </div>
+
+            <div class="divider"></div>
+
+            <button class="button">Continue to checkout</button>
+        </div>
+    </form>
+</body>
+
+</html>
