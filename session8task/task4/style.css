@@ -1,0 +1,43 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 40px;
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+}
+
+h2 {
+    border-bottom: 2px solid #d76d77;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.feature {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.icon img {
+    width: 100px;
+    height: 100px;
+}
+
+.text h3 {
+    margin: 0;
+    color: #333;
+}
+
+.text p {
+    margin: 5px 0 0;
+    color: #666;
+}
