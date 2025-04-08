@@ -1,0 +1,22 @@
+body {
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 20px;
+}
+
+input {
+    width:40%;
+    margin: 20px 0 20px 0;
+    border-radius: 5px;
+    border-color: gray;
+}
+
+.gender-display {
+    display: flex;
+}
+
+.btn-success {
+    height: 60px;
+    width: 150px;
+    font-size: 20px;
+}

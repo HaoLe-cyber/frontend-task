@@ -1,0 +1,20 @@
+.dropdown-toggle {
+    background-color: #ff6347 !important;
+    color: white !important;
+    border: none;
+    font-size: 20px;
+    padding: 12px;
+}
+
+.dropdown-menu {
+    background-color: #ff6347;
+}
+
+.dropdown-menu a {
+    color: white !important;
+    font-size: 18px;
+}
+
+.dropdown-menu a:hover {
+    background-color: blue !important;
+}

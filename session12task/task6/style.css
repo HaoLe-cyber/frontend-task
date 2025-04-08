@@ -1,0 +1,12 @@
+.body-display {
+    display: flex;
+}
+
+.card {
+    margin-left: 20px;
+    width: 20%;
+}
+
+.card :hover {
+    background-color: orange !important;
+}
