@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Thêm môn học</title>
+    <style>
+        body {
+            font-family: Arial;
+            padding: 40px;
+        }
+
+        input,
+        button {
+            padding: 10px;
+            margin: 5px 0;
+        }
+
+        #result {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Nhập tên môn học</h2>
+    <input type="text" id="subjectInput" placeholder="Nhập tên môn học...">
+    <button onclick="addSubject()">Thêm</button>
+
+    <div id="subjectList"></div>
+
+    <script>
+        let subjects = [];
+
+        function addSubject() {
+            const subjectName = document.getElementById("subjectInput").value.trim();
+            const subjectList = document.getElementById("subjectList");
+
+            if (subjectName == "") {
+                alert("Tên môn học không được để trống!");
+                return;
+            }
+            const subject = subjectName;
+            subjects.push(subject);
+            renderList();
+            subjectInput.value = ""; // Clear input field after adding
+        }
+
+        function renderList() {
+            const subjectList = document.getElementById("subjectList");
+            subjectList.innerHTML = ""; // Clear previous list
+
+            subjects.forEach((subject, index) => {
+                const subjectItem = document.createElement("div");
+                subjectItem.textContent = `${index + 1}. ${subject}`;
+                subjectList.appendChild(subjectItem);
+            });
+
+            if (subjects.length === 0) {
+                subjectList.textContent = "Chưa có môn học nào!";
+            }
+        };
+
+    </script>
+
+</body>
+
+</html>

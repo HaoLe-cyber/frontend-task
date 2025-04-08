@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Đổi màu nền</title>
+    <style>
+        body {
+            transition: background-color 0.5s ease;
+            text-align: center;
+            padding: 100px;
+            font-family: Arial;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Click để đổi màu nền</h1>
+    <button onclick="changeBackground()">Đổi màu nền</button>
+
+    <script>
+        function getRandomColor() {
+            const letters = '0123456789ABCDEF';
+            let color = '#';
+            for (let i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+
+        function changeBackground() {
+            document.body.style.backgroundColor = getRandomColor();
+        }
+    </script>
+</body>
+
+</html>

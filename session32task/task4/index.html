@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra Email</title>
+    <style>
+        body {
+            font-family: Arial;
+            padding: 40px;
+        }
+
+        input,
+        button {
+            padding: 10px;
+            margin: 5px 0;
+        }
+
+        #result {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Nhập Email</h2>
+    <input type="text" id="emailInput" placeholder="Nhập email...">
+    <button onclick="checkEmail()">Kiểm tra</button>
+
+    <div id="result"></div>
+
+    <script>
+        function checkEmail() {
+            const email = document.getElementById("emailInput").value.trim();
+            const result = document.getElementById("result");
+
+            // Kiểm tra định dạng email
+            const isValid = email.includes("@") && (email.endsWith(".com") || email.endsWith(".vn"));
+
+            if (isValid) {
+                result.textContent = "✅ Email hợp lệ!";
+                result.style.color = "green";
+            } else {
+                result.textContent = "❌ Email không hợp lệ!";
+                result.style.color = "red";
+            }
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Đếm số lần bấm</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 100px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        p {
+            font-size: 20px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <button onclick="countClick()">Bấm vào tôi</button>
+    <p>Số lần đã bấm: <span id="clickCount">0</span></p>
+
+    <script>
+        let count = 0;
+
+        function countClick() {
+            count++;
+            document.getElementById("clickCount").textContent = count;
+        }
+    </script>
+
+</body>
+
+</html>

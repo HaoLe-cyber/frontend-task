@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Điều chỉnh kích thước chữ</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 40px;
+            text-align: center;
+        }
+
+        #text {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            font-size: 20px;
+            padding: 10px 20px;
+            margin: 5px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            color: white;
+        }
+
+        .increase {
+            background-color: green;
+        }
+
+        .decrease {
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="text">Chữ sẽ thay đổi kích thước khi bấm nút</div>
+    <button class="btn increase" onclick="changeSize(2)">+</button>
+    <button class="btn decrease" onclick="changeSize(-2)">-</button>
+
+    <script>
+        let textElement = document.getElementById("text");
+
+        function changeSize(amount) {
+            // Lấy kích thước hiện tại và tăng/giảm theo amount
+            let currentSize = parseInt(window.getComputedStyle(textElement).fontSize);
+            let newSize = currentSize + amount;
+
+            // Giới hạn kích thước tối thiểu
+            if (newSize >= 10) {
+                textElement.style.fontSize = newSize + "px";
+            }
+        }
+    </script>
+
+</body>
+
+</html>
