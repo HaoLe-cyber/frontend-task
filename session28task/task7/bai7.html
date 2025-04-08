@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function goodStudent(students) {
+            let newStudents = students.filter((s) => (s.scores.math + s.scores.english + s.scores.literature) / 3 >= 8);
+            console.log(newStudents);
+        }
+        const students = [
+            { name: "Trần Trí Dương", scores: { math: 9, english: 8, literature: 7 } },
+
+            { name: "Hà Bích Ngọc", scores: { math: 3, english: 2, literature: 5 } },
+
+            { name: "Bùi Thái Sơn", scores: { math: 9.5, english: 9, literature: 9 } },
+        ]
+        goodStudent(students);
+    </script>
+</body>
+
+</html>

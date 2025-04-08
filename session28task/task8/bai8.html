@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const employees=[];
+        let total=0;
+        let check=0;
+        Number(total);
+        let choice;
+        do{
+        console.log('='.repeat(20)+'MENU'+'='.repeat(20));
+        console.log("1.Thêm nhân viên");
+        console.log("2.Xóa nhân viên");
+        console.log("3.Cập nhật mức lương");
+        console.log("4.Tìm kiếm nhân viên");
+        console.log("5.Thoát");
+        choice=parseInt(prompt("Lựa chọn của bạn:"));
+        switch(choice){
+            case 1:
+                let id=total+1;
+                let name=prompt("Nhập tên nhân viên:");
+                let position=prompt("Nhập vị trí cho nhân viên:");
+                let salary=prompt("Nhập mức lương cho nhân viên:");
+                employees.push({id,name,position,salary})
+                console.log("Thêm nhân viên thành công");
+                total++;
+                break;
+            case 2:
+                if(total==0){
+                    console.log("Danh sách rỗng");
+                    break;
+                }
+                else{
+                    check=0;
+                    let idFind=Number(prompt("Nhập id nhân viên cần tìm"));
+                    for(let i in employees){
+                        if(employees[i].id==idFind){
+                            check=1;
+                            console.log("Đã tìm thấy nhân viên.Xác nhận xóa?");
+                            let deleteChoice=parseInt(prompt("Đã tìm thấy nhân viên.Xác nhận xóa?\n1.Có 2.Không"));
+                            switch(deleteChoice){
+                                case 1:
+                                    employees.splice(i,1);
+                                    break;
+                                case 2:break;
+                                default:
+                                console.log("Lựa chọn ko hợp lệ");
+                                break;
+                            }
+                        }
+                    }
+                    if(check==0){
+                        console.log("Không tim thấy nhân viên cần xóa");
+                    }
+                    break;
+                }
+            case 3:
+                if(total==0){
+                    console.log("Danh sách rỗng");
+                }
+                else{
+                    check=0;
+                    let salaryId=parseInt(prompt("Nhập ID của nhân viên cần chỉnh sửa:"));
+                    for(let i in employees){
+                        if(employees[i].id==salaryId){
+                            check=1;
+                            employees[i].salary=Number(prompt("Nhập mức lương mới cho nhân viên:"));
+                            console.log("Chỉnh sửa thành công");
+                            break;
+                        }
+                    }
+                    if(check==0){
+                        console.log("Không tìm thấy nhân viên");
+                    }
+                    break;
+                }
+            case 4:
+            for(let i in employees){
+                console.log(employees[i]);
+            }
+            break;
+            default:console.log("Lựa chọn ko hợp lệ"); break;
+            }
+        }while(choice!=5);
+    </script>
+</body>
+</html>
