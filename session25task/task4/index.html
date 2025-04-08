@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function primeNum(n) {
+            Number(n);
+            if (isNaN(n)) {
+                return "Dữ liệu ko hợp lệ";
+            }
+            else {
+                let primeArr = [];
+                let check = 0;
+                for (let i = 2; i <= Math.sqrt(n); i++) {
+                    if (n % i == 0) {
+                        return "Không phải số nguyên tố";
+                        break;
+                    }
+                }
+                if (check == 1) {
+                    return "Là số nguyên tố"
+                }
+                index++;
+            }
+        }
+        let n = parseInt(prompt("Nhập số bất kỳ:"));
+        console.log(primeNum(n));
+    </script>
+</body>
+
+</html>

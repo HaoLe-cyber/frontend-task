@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function posInt(arr) {
+            let posArr = [];
+            if (!Array.isArray(arr)) {
+                return "Dữ liệu ko hợp lệ";
+            }
+            else {
+                for (let num of arr) {
+                    if (num > 0 && Number.isInteger(num)) {
+                        posArr.push(num);
+                    }
+                }
+                if (posArr.length == 0) {
+                    return "Mảng ko có số nguyên dương";
+                }
+                else {
+                    return posArr;
+                }
+            }
+        }
+        let arr = [-1, -2, 5, 3.5, -8, 24, 56];
+        console.log(posInt(arr));
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function evenNumber(arr) {
+            let evenArr = [];
+            for (let num of arr) {
+                if (!Array.isArray(arr)) {
+                    return "Dữ liệu ko hợp lệ";
+                }
+                else {
+                    for (let num of arr) {
+                        if (num % 2 == 0) {
+                            evenArr.push(num);
+                        }
+                    }
+                    if (evenArr.length == 0) {
+                        return "Mảng ko có số chẵn";
+                    }
+                    else {
+                        return evenArr;
+                    }
+                }
+            }
+        }
+        let arr = [11, 4, 56, 23, 8, 10];
+        console.log(evenNumber(arr));
+    </script>
+</body>
+
+</html>
