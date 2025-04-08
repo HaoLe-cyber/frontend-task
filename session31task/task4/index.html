@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #box {
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        height: 80%;
+    }
+
+    #text-box {
+        background-color: white;
+        display: flex;
+        align-items: center;
+        padding: 10px;
+        position: relative;
+        border-radius: 5px;
+        width: 60%;
+    }
+
+    #close-btn {
+        position: absolute;
+        top: 0px;
+        right: 10px;
+        cursor: pointer;
+    }
+
+    #btn {
+        border: 1px solid black;
+        width: 20%;
+    }
+</style>
+
+<body>
+    <div id="box">
+        <h1>Modal Example</h1>
+        <button id="btn">Open Modal</button>
+        <div id="text-box">
+            <p id="close-btn">X</p>
+            <p>Some text in the modal</p>
+        </div>
+        <script>
+            const layout = document.getElementById("box");
+            const modal = document.getElementById("btn");
+            const closeButton = document.getElementById("close-btn");
+            const textBox = document.getElementById("text-box");
+            modal.addEventListener("click", function () {
+                textBox.style.display = "flex";
+                textBox.style.alignItems = "Center";
+                layout.style.backgroundColor = "gray";
+            })
+            closeButton.addEventListener("click", function () {
+                textBox.style.display = "none";
+            })
+        </script>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #layout {
+        background-color: white;
+        color: black;
+    }
+</style>
+
+<body>
+    <h1>Toggle Dark/Light Mode</h1>
+    <p>Click the button to toggle between dark mode and light mode for this page</p>
+    <button id="btn">Toggle dark mode</button>
+    <script>
+        layoutColor = document.querySelector("body");
+        colorButton = document.getElementById("btn");
+        colorButton.onclick = function () {
+            layoutColor.style.backgroundColor = "black";
+            layoutColor.style.color = "white";
+        }
+    </script>
+</body>
+
+</html>

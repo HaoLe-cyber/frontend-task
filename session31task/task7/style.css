@@ -1,0 +1,39 @@
+.header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background-color: orangered;
+    color: white;
+}
+
+input[type=text] {
+    flex: 1;
+    padding: 10px;
+}
+
+button {
+    padding: 10px;
+}
+
+.list-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.task {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px;
+    border-bottom: 1px solid #ccc;
+    cursor: pointer;
+}
+
+.completed {
+    background-color: #555;
+    color: white;
+}

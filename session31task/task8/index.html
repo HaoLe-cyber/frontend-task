@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>My To Do List</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+        body {
+            font-family: Arial;
+            margin: 40px;
+        }
+
+        .header {
+            background-color: #f44336;
+            padding: 20px;
+            color: white;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        input[type="text"] {
+            padding: 10px;
+            width: 70%;
+            font-size: 16px;
+        }
+
+        button {
+            padding: 10px;
+            font-size: 16px;
+            background-color: #ccc;
+            cursor: pointer;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            padding: 12px;
+            background: #f4f4f4;
+            margin-top: 5px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        li.checked {
+            background-color: #999;
+            text-decoration: line-through;
+            color: white;
+        }
+
+        .close {
+            color: red;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .close:hover {
+            color: darkred;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="header">My To Do List</div>
+
+    <div style="margin-top: 10px;">
+        <input type="text" id="taskInput" placeholder="Nhập công việc..." />
+        <button onclick="addTask()">Add</button>
+    </div>
+
+    <ul id="taskList">
+        <li>Hit the gym <span class="close" onclick="removeTask(this)">×</span></li>
+        <li class="checked">Pay bills <span class="close" onclick="removeTask(this)">×</span></li>
+        <li>Meet George <span class="close" onclick="removeTask(this)">×</span></li>
+        <li>Buy eggs <span class="close" onclick="removeTask(this)">×</span></li>
+        <li>Read a book <span class="close" onclick="removeTask(this)">×</span></li>
+        <li>Organize office <span class="close" onclick="removeTask(this)">×</span></li>
+    </ul>
+
+    <script src="main.js"></script>
+</body>
+
+</html>

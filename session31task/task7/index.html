@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="header">
+        <h1>My To Do List</h1>
+        <form method="post">
+            <input type="text" id="task-name" placeholder="Title...">
+            <button onclick=addTask()>Add</button>
+        </form>
+    </div>
+    <div id="list-container"></div>
+    <script>
+        let todoList = [
+            { id: 1, task: "Hit the gym", completed: false },
+            { id: 2, task: "Pay bills", completed: false },
+            { id: 3, task: "Meet George", completed: false },
+            { id: 4, task: "Read a book", completed: false },
+            { id: 5, task: "Organize office", completed: false }
+        ]
+        const taskList = document.getElementById("list-container");
+        function renderTask() {
+
+            taskList.innerHTML = "";
+            todoList.forEach((task, index) => {
+                const taskDiv = document.createElement("div");
+                taskDiv.className = "task" + (task.completed ? " completed" : "");
+                taskDiv.innerHTML = `
+                    <span onclick=toggleComplete(${index})>${task.task}</span>
+                    <span style="cursor:pointer" onclick=deleteTask(${index}) class="delete">X</span>`;
+                taskList.appendChild(taskDiv);
+            });
+        }
+
+        function toggleComplete(index) {
+            todoList[index].completed = !todoList[index].completed;
+            renderTask();
+        }
+        function deleteTask(index) {
+            todoList.splice(index, 1);
+            renderTask();
+        }
+        function addTask() {
+            event.preventDefault();
+            const taskName = document.getElementById("task-name").value.trim();
+            if (taskName == "") {
+                alert("Yêu cầu nhập tên công việc!");
+                return;
+            }
+            todoList.push({
+                id: todoList.length + 1,
+                task: taskName,
+                completed: false,
+            })
+            document.getElementById("task-name").value = "";
+            renderTask();
+        }
+        renderTask();
+    </script>
+</body>
+
+</html>

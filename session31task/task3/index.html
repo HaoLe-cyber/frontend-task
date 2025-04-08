@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #green-background {
+        background-color: green;
+        padding-bottom: 50px;
+        padding-right: 10px;
+        width: 20%;
+        border: 1px solid black;
+        cursor: pointer;
+    }
+
+    #red-background {
+        background-color: red;
+        padding-bottom: 50px;
+        padding-right: 10px;
+        width: 20%;
+        cursor: pointer;
+        border: 1px solid black
+    }
+
+    #purple-background {
+        background-color: purple;
+        padding-bottom: 50px;
+        padding-right: 10px;
+        width: 20%;
+        cursor: pointer;
+        border: 1px solid black;
+    }
+</style>
+
+<body>
+    <p>change background-color</p>
+    <p>Mouse click</p>
+    <div style="display:flex;flex-direction: row;gap:10px;">
+        <div id="green-background">
+            Xanh
+        </div>
+        <div id="red-background">
+            Đỏ
+        </div>
+        <div id="purple-background">
+            Tím
+        </div>
+    </div>
+    <script>
+        const greenBackground = document.getElementById("green-background");
+        const redBackground = document.getElementById("red-background");
+        const purpleBackground = document.getElementById("purple-background");
+        const background = document.querySelector("body");
+        greenBackground.addEventListener("click", function () {
+            background.style.backgroundColor = "green";
+        })
+        redBackground.addEventListener("click", function () {
+            background.style.backgroundColor = "red";
+        })
+        purpleBackground.addEventListener("click", function () {
+            background.style.backgroundColor = "purple";
+        })    
+    </script>
+</body>
+
+</html>
