@@ -1,0 +1,23 @@
+.container {
+    display: flex;
+    justify-content: center;
+    /* Căn giữa theo chiều ngang */
+    align-items: center;
+    /* Căn giữa theo chiều dọc */
+    width: 600px;
+    height: 400px;
+    background-color: #eee;
+    border: 2px solid black;
+    margin: auto;
+}
+
+.centered {
+    width: 100px;
+    height: 100px;
+    background-color: #3498db;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}

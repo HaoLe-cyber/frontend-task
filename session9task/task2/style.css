@@ -1,0 +1,35 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f8f8f8;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    /* 4 cột có kích thước bằng nhau */
+    grid-template-rows: repeat(2, 1fr);
+    /* 2 hàng có kích thước bằng nhau */
+    gap: 10px;
+    /* Khoảng cách giữa các ô */
+    width: 80%;
+    max-width: 800px;
+    padding: 20px;
+    background: #fff;
+    border: 2px solid black;
+}
+
+.item {
+    background-color: #2ecc71;
+    /* Màu xanh */
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    font-size: 18px;
+    border-radius: 8px;
+}
